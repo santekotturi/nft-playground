@@ -22,10 +22,12 @@ module.exports = {
     artifacts: './src/artifacts',
   },
   networks: {
-    hardhat: {},
-    // matic: {
-    //   url: "https://polygon-mumbai.g.alchemy.com/v2/YOUR_APP",
-    //   accounts: ["MATIC_PRIVATE_KEY"]
-    // }
+    hardhat: {
+      chainId: 1337
+    },
+    matic: {
+      url: "https://polygon-mumbai.g.alchemy.com/v2/fvjo_zrIHZDz0OZa3UST18HPIncGy8gO",
+      accounts: ["07fa132397b9e1a5486c5c3b5d825c35688bf74de7f5d10e8a1f89f3be15f90b"]
+    }
   },
 };

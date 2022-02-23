@@ -4,7 +4,9 @@ import { useEffect, useState } from 'react';
 import { ethers } from 'ethers';
 import KiftVans from '../artifacts/contracts/MyNFT.sol/KiftVans.json';
 
-const contractAddress = 'YOUR_DEPLOYED_CONTRACT_ADDRESS';
+// const contractAddress = '0x9fE46736679d2D9a65F0992F2272dE9f3c7fa6e0';
+// const contractAddress = '0x88044c539F6CC0d27Dc0c20e83E99d754Ebee994';
+const contractAddress = '0xbaa1763C83063fe8571Ff8A8D8AD903CF1DA94d9';
 
 const provider = new ethers.providers.Web3Provider(window.ethereum);
 
@@ -32,7 +34,7 @@ function Home() {
     <div>
       <WalletBalance />
 
-      <h1>Fired Guys NFT Collection</h1>
+      <h1>Kift Van NFT Collection</h1>
       <div className="container">
         <div className="row">
           {Array(totalMinted + 1)
@@ -51,8 +53,8 @@ function Home() {
 function NFTImage({ tokenId, getCount }) {
   const contentId = 'Qmdbpbpy7fA99UkgusTiLhMWzyd3aETeCFrz7NpYaNi6zY';
   const metadataURI = `${contentId}/${tokenId}.json`;
-  const imageURI = `https://gateway.pinata.cloud/ipfs/${contentId}/${tokenId}.png`;
-//   const imageURI = `img/${tokenId}.png`;
+  // const imageURI = `https://gateway.pinata.cloud/ipfs/${contentId}/${tokenId}.png`;
+  const imageURI = `img/0${tokenId}.png`;
 
   const [isMinted, setIsMinted] = useState(false);
   useEffect(() => {
